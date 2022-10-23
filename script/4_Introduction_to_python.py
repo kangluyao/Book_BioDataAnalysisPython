@@ -95,3 +95,71 @@ print(X, N)
 N = int(X)
 print(X)
 print(N)
+
+# Exercise 4
+F = 50
+C = (F - 32) * 5 / 9
+print(C)
+
+# Exercise 5
+x = 5
+y = 2.1
+z = 4.6
+(x + y ** (2 * z + x)) / (100 * (x + y**3)) + x * z**4
+
+# Exercise 6
+year = 5
+expected_adult_plants = 15 **(year-1)
+print(expected_adult_plants)
+
+# 4.5 Functions
+print("Hello world")
+help(print)
+y = abs(x)
+
+# Multiple arguments must be separated by commas.
+smallest_number = min(10, 5, 98)
+largest_number = max(10, 5, 98)
+print("The smallest number is:",smallest_number)
+print("The largest number is:",largest_numbe)
+
+# nest multiple functions and mathematical expressions
+print(abs(55-298))
+
+fin = open("documents/some_text_file.txt", "rt")
+contents = fin.read()
+fin.close()
+
+# Exercise 7:
+elephant_masses = [114, 91, 98, 109, 91, 104, 125, 128, 93, 106, 134, 118]
+smallest_calf = min(elephant_masses)
+largest_calf = max(elephant_masses)
+difference = abs(largest_calf - smallest_calf)
+print("the mass of the smallest calf is", smallest_calf)
+print("the mass of the largest calf is", largest_calf)
+print("the mass difference between the smallest and largest calf is", difference)
+
+# 4.6 Using functions provided by modules and packages
+# import module or package into python session
+import math  # common mathematical functions
+E = math.exp(0.5)  # To call a function from a specific module we use the module and function names, separated by a dot.
+print(E)
+
+import numpy  # more sophisticated mathematical functions
+r = numpy.random.uniform(0, 100)
+print(r)
+# load the parts of a package that we actually need
+from numpy import linalg, random
+r = random.uniform(0, 100)
+print(r)
+
+# Exercise 8
+N0 = 10**6
+r = 0.2
+N5 = N0 * math.exp(r * 5)
+N20 = N0 * math.exp(r * 20)
+print(N5, N20)
+
+# Exercise 9
+
+
