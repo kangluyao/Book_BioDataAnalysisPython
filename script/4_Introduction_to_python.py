@@ -163,7 +163,10 @@ print(N5, N20)
 # Exercise 9
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e0ba18d4f7935e59e6762bad46d9efe4f6c5e2d7
