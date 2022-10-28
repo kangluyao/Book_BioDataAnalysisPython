@@ -53,3 +53,79 @@ x = int("4") + 1  # valid
 x = "3 + 4  # invalid
 
 # 4.7.2 Counting substring occurrences
+locations = "N valley, S valley, S valley, SE peak, E ridge, SE peak, N valley"
+Ndays = locations.count("S valley")
+print(Ndays)
+Ntransitions = locations.count("S valley, SE peak")
+print(Ntransitions)
+
+Ntransitions = locations.count("s Valley, se Peak") # invalid syntax, cause python are generally case-sensitive
+
+# Exercise 12
+## two methods download files from URL
+### method1
+pip install requests  # install package requests
+import requests  # Import the requests library
+URL = "https://pages.uoregon.edu/slouca/LoucaLab/SECTION_Publications/MODULE_Publications/CLASS_Books/UNIT_BioDataAnalysisPython/supporting_datasets/animal_species_names_1000.txt"
+response = requests.get(URL)  # download the data behind the URL
+open("animal_species_names_1000.txt", "wb").write(response.content)  # Open the response into a new file called animal_species_names_1000.txt
+
+### method2
+import wget
+response = wget.download(URL, "data/animal_species_names_1000.txt")
+fin = open(response, "rt")
+species_names = fin.read()
+fin.close()
+NSycon = species_names.count("Sycon")
+print(NSycon)  # 93
+
+# 4.7.3 Replacing substrings
+DNA = "TATCGGCATCTACTAATCCGACTTTCCCTTCACGAGCTAAGGCAACGGCTAAATTTACTGCAACAGTAGCGA"
+## compute the complement of this sequence
+### swap A <--> T
+complement = DNA.replace("A", "a")  # temporarily replace A with a
+complement = complement.replace("T", "A")  # replace T with A
+complement = complement.replace("a", "T")  # replace a with T
+
+### swap G <--> C
+complement = complement.replace("G", "g")  # temporarily replace G with g
+complement = complement.replace("C", "G")  # replace C with G
+complement = complement.replace("g", "C")  # replace g with C
+print(complement)
+
+# Since replace returns the modified string, we can chain multiple replace calls to achieve the
+#same outcome as above, but with fewer lines of code:
+### swap A <--> T
+complement = DNA.replace("A", "a").replace("T", "A").replace("a", "T")
+### swap G <--> C
+complement = complement.replace("G", "g").replace("C", "G").replace("g", "C")
+print(complement)
+
+# Exercise 13
+complement = DNA.replace("A","T") # replace A with T
+complement = complement.replace("T","A") # replace T with A
+complement = complement.replace("G","C") # replace G with C
+complement = complement.replace("C","G") # replace C with G
+
+# 4.7.4 String formatting (C-style)
+name = "Ecoli_K12"
+L = 4639221
+A = 0.24527
+TX = "Genome of %s has length %d, adenine fraction %f"%(name, L, A)
+print(TX)
+
+print("Adenine fraction %.1f%%"%(100*A))  # %% indicates percent
+
+# the “newline” character, represented by a \n
+print("Genome of %s: \n length: %d \n Adenine fraction: %.1f%%"%(name, L, A*100))
+
+# Exercise 14
+Nbeetles = 105
+average_weight = 1.6487135
+country_of_origin = "Kenya"
+print("Across %d examined beetles from %s, the average weight was %.3f g."%(Nbeetles, country_of_origin, average_weight))
+
+# Exercise 15
+mass = 596599.7
+metabolic_rate = 48.65
+print("Pinus massoniana: \n ")
