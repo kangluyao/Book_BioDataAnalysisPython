@@ -128,4 +128,4 @@ print("Across %d examined beetles from %s, the average weight was %.3f g."%(Nbee
 # Exercise 15
 mass = 596599.7
 metabolic_rate = 48.65
-print("Pinus massoniana: \n ")
+print("Pinus massoniana:\n Mass: 5.97e+05 gram")
