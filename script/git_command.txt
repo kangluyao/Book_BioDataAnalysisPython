@@ -1,0 +1,22 @@
+# 对git进行简单配置
+git config --global user.name "kangluyao"
+git config --global user.email "luyaokang@outlook.com"
+git config --global --list
+
+# create a new repository on the command line
+git init
+echo "# Microbes in Tibetan permafrost" > README.md # > 覆盖原先文件；>>追加内容，原内容将保留
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/kangluyao/Book_BioDataAnalysisPython.git
+git push -u origin main
+
+# git rm --cached script -rf
+git add script/.
+git commit -m "upload"
+git push -u origin main
+
+
+
+git remote set-url origin https://github.com/kangluyao/Book_BioDataAnalysisPython.git
