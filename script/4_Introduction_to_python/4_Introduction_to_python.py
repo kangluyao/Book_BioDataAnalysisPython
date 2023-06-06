@@ -121,7 +121,7 @@ y = abs(x)
 smallest_number = min(10, 5, 98)
 largest_number = max(10, 5, 98)
 print("The smallest number is:",smallest_number)
-print("The largest number is:",largest_numbe)
+print("The largest number is:",largest_number)
 
 # nest multiple functions and mathematical expressions
 print(abs(55-298))
